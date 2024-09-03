@@ -8,14 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        phone: "535px",
+        // => @media (min-width: 1024px) { ... }
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       gridTemplateColumns: {
-        body: "205px 1fr 320px",
-        bodymd: "205px 1fr 260px",
+        body: "205px 1fr 30%",
+        bodymd: "205px 1fr 20%",
+        bodylaptop: "205px 1fr 20%",
+        bodysm: "200px 1fr",
       },
     },
   },
