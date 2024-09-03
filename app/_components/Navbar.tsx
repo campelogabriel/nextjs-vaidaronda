@@ -1,24 +1,28 @@
 "use client";
-
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import cx from "classnames";
 
 function Navbar() {
+  const pathName = usePathname();
+  console.log(pathName);
   return (
     <div className="py-8 px-4 flex items-center lg:flex-col md:flex md:flex-row bg-gray-100	 backdrop-opacity-90 justify-between">
       <h1>Vai Dar Praia ?</h1>
       <ul className="hidden lg:pt-24 lg:flex-grow  phone:flex flex-row lg:flex-col  md:flex md:flex-row gap-8">
         <Link
           href="/dashboard"
-          className={
-            "flex border-transparent border-2 gap-8 items-center p-4 hover:md:bg-slate-200 hover:md:border-2 	hover:rounded-3xl"
-          }
+          className={cx(
+            "flex border-transparent border-b-2 gap-8 items-center p-4 hover:md:bg-slate-200",
+            pathName == "/dashboard" ? "border-sky-800" : ""
+          )}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="1.5"
-            stroke="#1e40af"
+            stroke={pathName == "/dashboard" ? "#075985" : "#52525b"}
             className="size-8"
           >
             <path
@@ -27,20 +31,28 @@ function Navbar() {
               d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
             />
           </svg>
-          <span className=" text-blue-800 font-normal hidden lg:block">
+          <span
+            className={cx(
+              "hidden lg:block ",
+              pathName == "/dashboard" ? "text-sky-800 " : "text-gray-500"
+            )}
+          >
             Dashboard
           </span>
         </Link>
         <Link
           href="/mapa"
-          className="flex border-transparent border-2 gap-8 items-center p-4 hover:md:bg-slate-200 hover:md:border-2 	hover:rounded-3xl"
+          className={cx(
+            "flex border-transparent border-b-2 gap-8 items-center p-4 hover:md:bg-slate-200",
+            pathName == "/mapa" ? "border-sky-800" : ""
+          )}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="1.5"
-            stroke="#52525b"
+            stroke={pathName == "/mapa" ? "#075985" : "#52525b"}
             className="size-8"
           >
             <path
@@ -49,18 +61,28 @@ function Navbar() {
               d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z"
             />
           </svg>
-          <span className="hidden lg:block ">Mapa</span>
+          <span
+            className={cx(
+              "hidden lg:block ",
+              pathName == "/mapa" ? "text-sky-800 " : "text-gray-500"
+            )}
+          >
+            Mapa
+          </span>
         </Link>
         <Link
           href="/localsalvo"
-          className="flex border-transparent border-2 gap-8 items-center p-4 hover:md:bg-slate-200 hover:md:border-2 	hover:rounded-3xl"
+          className={cx(
+            "flex border-transparent border-b-2 gap-8 items-center p-4 hover:md:bg-slate-200",
+            pathName == "/localsalvo" ? "border-sky-800" : ""
+          )}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="1.5"
-            stroke="#52525b"
+            stroke={pathName == "/localsalvo" ? "#075985" : "#52525b"}
             className="size-8"
           >
             <path
@@ -69,18 +91,28 @@ function Navbar() {
               d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
             />
           </svg>
-          <span className="hidden lg:block">Locais Salvos</span>
+          <span
+            className={cx(
+              "hidden lg:block ",
+              pathName == "/localsalvo" ? "text-sky-800 " : "text-gray-500"
+            )}
+          >
+            Locais Salvos
+          </span>
         </Link>
         <Link
           href="/calendario"
-          className="flex border-transparent border-2 gap-8 items-center p-4 hover:md:bg-slate-200 hover:md:border-2 	hover:rounded-3xl"
+          className={cx(
+            "flex border-transparent border-b-2 gap-8 items-center p-4 hover:md:bg-slate-200",
+            pathName == "/calendario" ? "border-sky-800" : ""
+          )}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
-            stroke="#52525b"
+            stroke={pathName == "/calendario" ? "#075985" : "#52525b"}
             className="size-8"
           >
             <path
@@ -90,19 +122,29 @@ function Navbar() {
             />
           </svg>
 
-          <span className="hidden lg:block">Calendário</span>
+          <span
+            className={cx(
+              "hidden lg:block ",
+              pathName == "/calendario" ? "text-sky-800 " : "text-gray-500"
+            )}
+          >
+            Calendário
+          </span>
         </Link>
       </ul>
       <Link
         href="/configuracoes"
-        className="hidden phone:flex gap-8 items-center border-transparent border-2 gap-8 items-center p-4 hover:md:bg-slate-200 hover:md:border-2 	hover:rounded-3xl "
+        className={cx(
+          "phone:flex hidden border-transparent border-b-2 gap-8 items-center p-4 hover:md:bg-slate-200",
+          pathName == "/configuracoes" ? "border-sky-800" : ""
+        )}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="1.5"
-          stroke="#1e40af"
+          stroke={pathName == "/configuracoes" ? "#075985" : "#52525b"}
           className="size-8"
         >
           <path
@@ -116,7 +158,14 @@ function Navbar() {
             d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
           />
         </svg>
-        <span className="hidden lg:block ">Configurações</span>
+        <span
+          className={cx(
+            "hidden lg:block",
+            pathName == "/configuracoes" ? "text-sky-800  " : "text-gray-500"
+          )}
+        >
+          Configurações
+        </span>
       </Link>
       <div className="phone:hidden block">
         <svg
