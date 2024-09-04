@@ -7,14 +7,14 @@ function Navbar() {
   const pathName = usePathname();
   console.log(pathName);
   return (
-    <div className="py-8 px-4 flex items-center lg:flex-col md:flex md:flex-row bg-gray-100	 backdrop-opacity-90 justify-between">
+    <div className="p-8 flex items-center lg:flex-col md:flex md:flex-row bg-gray-100	 backdrop-opacity-90 justify-between">
       <h1>Vai Dar Praia ?</h1>
-      <ul className="hidden lg:pt-24 lg:flex-grow  phone:flex flex-row lg:flex-col  md:flex md:flex-row gap-8">
+      <ul className="hidden font-medium lg:pt-24 lg:flex-grow  phone:flex flex-row lg:flex-col  md:flex md:flex-row gap-8">
         <Link
           href="/dashboard"
           className={cx(
-            "flex border-transparent border-b-2 gap-8 items-center p-4 hover:md:bg-slate-200",
-            pathName == "/dashboard" ? "border-sky-800" : ""
+            "flex	border-b-2 gap-8 items-center p-4 hover:md:bg-slate-200",
+            pathName == "/dashboard" ? "border-sky-800" : "border-transparent"
           )}
         >
           <svg
@@ -43,8 +43,8 @@ function Navbar() {
         <Link
           href="/mapa"
           className={cx(
-            "flex border-transparent border-b-2 gap-8 items-center p-4 hover:md:bg-slate-200",
-            pathName == "/mapa" ? "border-sky-800" : ""
+            "flex border-b-2 gap-8 items-center p-4 hover:md:bg-slate-200",
+            pathName == "/mapa" ? "border-sky-800" : "border-transparent"
           )}
         >
           <svg
@@ -73,8 +73,8 @@ function Navbar() {
         <Link
           href="/localsalvo"
           className={cx(
-            "flex border-transparent border-b-2 gap-8 items-center p-4 hover:md:bg-slate-200",
-            pathName == "/localsalvo" ? "border-sky-800" : ""
+            "flex border-b-2 gap-8 items-center p-4 hover:md:bg-slate-200",
+            pathName == "/localsalvo" ? "border-sky-800" : "border-transparent"
           )}
         >
           <svg
@@ -103,8 +103,8 @@ function Navbar() {
         <Link
           href="/calendario"
           className={cx(
-            "flex border-transparent border-b-2 gap-8 items-center p-4 hover:md:bg-slate-200",
-            pathName == "/calendario" ? "border-sky-800" : ""
+            "flex border-b-2 gap-8 items-center p-4 hover:md:bg-slate-200",
+            pathName == "/calendario" ? "border-sky-800" : "border-transparent"
           )}
         >
           <svg
@@ -135,8 +135,8 @@ function Navbar() {
       <Link
         href="/configuracoes"
         className={cx(
-          "phone:flex hidden border-transparent border-b-2 gap-8 items-center p-4 hover:md:bg-slate-200",
-          pathName == "/configuracoes" ? "border-sky-800" : ""
+          "phone:flex hidden border-b-2 gap-8 items-center p-4 hover:md:bg-slate-200",
+          pathName == "/configuracoes" ? "border-sky-800" : "border-transparent"
         )}
       >
         <svg
