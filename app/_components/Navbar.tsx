@@ -2,12 +2,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import cx from "classnames";
-import Dropview from "../_components/_Dashboard/Dropview";
+import Dropview from "./_Dashboard/Dropview";
+import Image from "next/image";
 
 function Navbar() {
   const pathName = usePathname();
   return (
-    <div className="p-8 flex items-center lg:flex-col md:flex md:flex-row bg-sky-800 phone:bg-gray-100	 backdrop-opacity-90 justify-between">
+    <div className=" h-full z-50 p-8 text-2xl h-screen md:border-r-2  border-gray-200 flex items-center lg:flex-col md:flex md:flex-row bg-sky-800 phone:bg-gray-100	 backdrop-opacity-90 justify-between">
       <h1 className="text-gray-100 phone:text-sky-800 font-semibold">
         VaiDarPraia?
       </h1>
@@ -49,20 +50,12 @@ function Navbar() {
             pathName == "/praia" ? "border-sky-800" : "border-transparent"
           )}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke={pathName == "/praia" ? "#075985" : "#52525b"}
-            className="size-8"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z"
-            />
-          </svg>
+          <Image
+            alt="beach"
+            src={pathName == "/praia" ? "/beach.svg" : "/beach-no.svg"}
+            width={22}
+            height={22}
+          />
           <span
             className={cx(
               "hidden lg:block ",
@@ -72,36 +65,7 @@ function Navbar() {
             Praia
           </span>
         </Link>
-        <Link
-          href="/localsalvo"
-          className={cx(
-            "flex border-b-2 gap-8 items-center p-4 hover:md:bg-slate-200",
-            pathName == "/localsalvo" ? "border-sky-800" : "border-transparent"
-          )}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke={pathName == "/localsalvo" ? "#075985" : "#52525b"}
-            className="size-8"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
-            />
-          </svg>
-          <span
-            className={cx(
-              "hidden lg:block ",
-              pathName == "/localsalvo" ? "text-sky-800 " : "text-gray-500"
-            )}
-          >
-            Locais Salvos
-          </span>
-        </Link>
+
         <Link
           href="/calendario"
           className={cx(
