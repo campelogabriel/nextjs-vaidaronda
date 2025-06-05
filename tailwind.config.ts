@@ -18,9 +18,9 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       gridTemplateColumns: {
-        body: "205px 1fr 30%",
-        bodymd: "205px 1fr 20%",
-        bodylaptop: "205px 1fr 20%",
+        body: "205px 1fr",
+        dashgrid: "1fr 370px",
+        bodymd: "205px 700px 1fr",
         bodysm: "200px 1fr",
       },
     },

@@ -1,0 +1,89 @@
+<svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><style>
+          .path-0{
+            animation:pathAnim-0 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+          }
+          @keyframes pathAnim-0{
+            0%{
+              d: path("M 0,400 L 0,60 C 203.5,67 407,74 647,74 C 887,74 1163.5,67 1440,60 L 1440,400 L 0,400 Z");
+            }
+            25%{
+              d: path("M 0,400 L 0,60 C 196.5,57 393,54 633,54 C 873,54 1156.5,57 1440,60 L 1440,400 L 0,400 Z");
+            }
+            50%{
+              d: path("M 0,400 L 0,60 C 291.5,54 583,48 823,48 C 1063,48 1251.5,54 1440,60 L 1440,400 L 0,400 Z");
+            }
+            75%{
+              d: path("M 0,400 L 0,60 C 175.5,72 351,84 591,84 C 831,84 1135.5,72 1440,60 L 1440,400 L 0,400 Z");
+            }
+            100%{
+              d: path("M 0,400 L 0,60 C 203.5,67 407,74 647,74 C 887,74 1163.5,67 1440,60 L 1440,400 L 0,400 Z");
+            }
+           }</style><path d="M 0,400 L 0,60 C 203.5,67 407,74 647,74 C 887,74 1163.5,67 1440,60 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#0693e3" fill-opacity="0.265" class="transition-all duration-300 ease-in-out delay-150 path-0"></path><style>
+          .path-1{
+            animation:pathAnim-1 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+          }
+          @keyframes pathAnim-1{
+            0%{
+              d: path("M 0,400 L 0,140 C 259.5,126 519,112 759,112 C 999,112 1219.5,126 1440,140 L 1440,400 L 0,400 Z");
+            }
+            25%{
+              d: path("M 0,400 L 0,140 C 270,146.5 540,153 780,153 C 1020,153 1230,146.5 1440,140 L 1440,400 L 0,400 Z");
+            }
+            50%{
+              d: path("M 0,400 L 0,140 C 194,153 388,166 628,166 C 868,166 1154,153 1440,140 L 1440,400 L 0,400 Z");
+            }
+            75%{
+              d: path("M 0,400 L 0,140 C 260.5,137.5 521,135 761,135 C 1001,135 1220.5,137.5 1440,140 L 1440,400 L 0,400 Z");
+            }
+            100%{
+              d: path("M 0,400 L 0,140 C 259.5,126 519,112 759,112 C 999,112 1219.5,126 1440,140 L 1440,400 L 0,400 Z");
+            }
+          }</style><path d="M 0,400 L 0,140 C 259.5,126 519,112 759,112 C 999,112 1219.5,126 1440,140 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#0693e3" fill-opacity="0.4" class="transition-all duration-300 ease-in-out delay-150 path-1"></path><style>
+          .path-2{
+            animation:pathAnim-2 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+          }
+          @keyframes pathAnim-2{
+            0%{
+              d: path("M 0,400 L 0,220 C 180.5,233.5 361,247 601,247 C 841,247 1140.5,233.5 1440,220 L 1440,400 L 0,400 Z");
+            }
+            25%{
+              d: path("M 0,400 L 0,220 C 226,223.5 452,227 692,227 C 932,227 1186,223.5 1440,220 L 1440,400 L 0,400 Z");
+            }
+            50%{
+              d: path("M 0,400 L 0,220 C 240,219 480,218 720,218 C 960,218 1200,219 1440,220 L 1440,400 L 0,400 Z");
+            }
+            75%{
+              d: path("M 0,400 L 0,220 C 267.5,226.5 535,233 775,233 C 1015,233 1227.5,226.5 1440,220 L 1440,400 L 0,400 Z");
+            }
+            100%{
+              d: path("M 0,400 L 0,220 C 180.5,233.5 361,247 601,247 C 841,247 1140.5,233.5 1440,220 L 1440,400 L 0,400 Z");
+            }
+          }</style><path d="M 0,400 L 0,220 C 180.5,233.5 361,247 601,247 C 841,247 1140.5,233.5 1440,220 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#0693e3" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-2"></path><style>
+          .path-3{
+            animation:pathAnim-3 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+          }
+          @keyframes pathAnim-3{
+            0%{
+              d: path("M 0,400 L 0,300 C 190,286.5 380,273 620,273 C 860,273 1150,286.5 1440,300 L 1440,400 L 0,400 Z");
+            }
+            25%{
+              d: path("M 0,400 L 0,300 C 265,300 530,300 770,300 C 1010,300 1225,300 1440,300 L 1440,400 L 0,400 Z");
+            }
+            50%{
+              d: path("M 0,400 L 0,300 C 299,290 598,280 838,280 C 1078,280 1259,290 1440,300 L 1440,400 L 0,400 Z");
+            }
+            75%{
+              d: path("M 0,400 L 0,300 C 204,299 408,298 648,298 C 888,298 1164,299 1440,300 L 1440,400 L 0,400 Z");
+            }
+            100%{
+              d: path("M 0,400 L 0,300 C 190,286.5 380,273 620,273 C 860,273 1150,286.5 1440,300 L 1440,400 L 0,400 Z");
+            }
+          }</style><path d="M 0,400 L 0,300 C 190,286.5 380,273 620,273 C 860,273 1150,286.5 1440,300 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#0693e3" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-3"></path></svg>

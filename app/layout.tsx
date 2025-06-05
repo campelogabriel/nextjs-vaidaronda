@@ -1,12 +1,18 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
+import { Lato } from "next/font/google";
 import Navbar from "./_components/Navbar";
-import { Inter } from "next/font/google";
+import ReactQueryProvider from "./utils/ReactQueryProvider";
 
 export const metadata: Metadata = {
   title: "VaiDarPraia - HomePage",
 };
-const inter = Inter({ subsets: ["latin"] });
+
+const lato = Lato({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export default function RootLayout({
   children,
@@ -14,14 +20,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <div className="flex flex-col lg:grid lg:grid-cols-body h-screen">
+    <html lang="pt-br">
+      <body className={lato.className}>
+        <div className="flex flex-col lg:flex-row h-screen">
           <Navbar />
-          <main className="bg-white flex-grow">{children}</main>
-          <div className="p-10 bg-gradient-to-r from-blue-950 to-cyan-950 backdrop-opacity-80">
-            info
-          </div>
+          <ReactQueryProvider>
+            <main className="flex-grow relative overflow-hidden">
+              {children}
+            </main>
+          </ReactQueryProvider>
         </div>
       </body>
     </html>
