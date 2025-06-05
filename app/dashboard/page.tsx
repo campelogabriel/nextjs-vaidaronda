@@ -10,6 +10,7 @@ import Skeleton from "../_components/Skeleton";
 import getMonthByNumber from "../utils/getMonthByNumber";
 import getDayByNumber from "../utils/getDayByNumber";
 import convertorName from "../utils/convertorName";
+import getArrowUp from "../utils/getArrowUp";
 import BoxInfo from "../_components/_Dashboard/BoxInfo";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -60,8 +61,8 @@ function Page() {
           )}
         >
           <div className="flex items-center gap-4">
-            <h1 className="font-semibold flex gap-4 justify-center items-center text-md sm:text-3xl self-start">
-              Tempo Agora
+            <h1 className="font-semibold text-gray-900 flex gap-4 justify-center items-center text-md sm:text-2xl self-start">
+              Clima Agora e Antes
             </h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -129,7 +130,17 @@ function Page() {
                   alt="arrow"
                   width={20}
                   height={20}
-                  src={"arrow-up.svg"}
+                  src={
+                    getArrowUp(
+                      data.forecast.forecastday[0].hour[
+                        new Date().getHours() - 1
+                      ].chance_of_rain,
+                      data.forecast.forecastday[0].hour[new Date().getHours()]
+                        .chance_of_rain
+                    )
+                      ? "arrow-up.svg"
+                      : "arrow-down.svg"
+                  }
                 />
                 <span className=" text-2xl self-end  text-gray-500">
                   {
@@ -160,7 +171,17 @@ function Page() {
                   alt="arrow"
                   width={20}
                   height={20}
-                  src={"arrow-up.svg"}
+                  src={
+                    getArrowUp(
+                      data.forecast.forecastday[0].hour[
+                        new Date().getHours() - 1
+                      ].humidity,
+                      data.forecast.forecastday[0].hour[new Date().getHours()]
+                        .humidity
+                    )
+                      ? "arrow-up.svg"
+                      : "arrow-down.svg"
+                  }
                 />
                 <span className=" text-2xl self-end  text-gray-500">
                   {
@@ -189,7 +210,17 @@ function Page() {
                   alt="arrow"
                   width={20}
                   height={20}
-                  src={"arrow-down.svg"}
+                  src={
+                    getArrowUp(
+                      data.forecast.forecastday[0].hour[
+                        new Date().getHours() - 1
+                      ].uv,
+                      data.forecast.forecastday[0].hour[new Date().getHours()]
+                        .uv
+                    )
+                      ? "arrow-up.svg"
+                      : "arrow-down.svg"
+                  }
                 />
                 <span className=" text-2xl self-end  text-gray-500">
                   {

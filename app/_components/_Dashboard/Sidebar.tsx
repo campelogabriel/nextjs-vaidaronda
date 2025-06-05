@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import dayjs from "dayjs";
 
 function Sidebar({ praia }) {
   return (
@@ -71,7 +72,6 @@ function Sidebar({ praia }) {
               {praia.forecast.forecastday[0].astro.sunrise}
             </p>
           </div>
-          <p className="text-2xl md:text-xl">16 horas atrás</p>
         </div>
         <div className="flex border-2 border-blue-950 border-opacity-50 rounded-xl justify-between gap-12 p-4 bg-white bg-opacity-15 items-center">
           <div className="flex gap-8 items-center">
@@ -80,7 +80,6 @@ function Sidebar({ praia }) {
               {praia.forecast.forecastday[0].astro.sunset}
             </p>
           </div>
-          <p className="text-2xl md:text-xl">Em 5 horas</p>
         </div>
       </div>
     </div>

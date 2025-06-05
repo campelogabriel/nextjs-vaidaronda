@@ -8,6 +8,7 @@ export default function useQueryGetPraiaWeather() {
         "https://api.weatherapi.com/v1/forecast.json?key=a5fe6df8087746faa9c11421242908&q=-22.970722,-43.182365&lang=pt&days=2"
       );
       const data = await res.json();
+      console.log(data);
       return data;
     },
   });
